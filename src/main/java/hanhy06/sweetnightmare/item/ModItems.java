@@ -11,10 +11,10 @@ import net.minecraft.util.Identifier;
 import java.util.function.Function;
 
 public class ModItems {
-    private static final Item CANDY_BASKET = registerModItem(
+    public static final Item CANDY_BUCKET = registerModItem(
             "candy_basket",
                 CandyBasketItem::new,
-                new Item.Settings()
+                new Item.Settings().maxCount(1)
             );
 
     private static Item registerModItem(String name, Function<Item.Settings, Item> factory, Item.Settings settings) {

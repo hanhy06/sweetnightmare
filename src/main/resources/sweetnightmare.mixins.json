@@ -1,14 +1,14 @@
 {
-	"required": true,
-	"package": "hanhy06.sweetnightmare.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-
-	],
-	"injectors": {
-		"defaultRequire": 1
-	},
-	"overwrites": {
-		"requireAnnotations": true
+  "required": true,
+  "package": "hanhy06.sweetnightmare.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "VillagerEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
 	}
 }
