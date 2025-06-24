@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "sweetnightmare",
+	"version": "${version}",
+	"name": "sweetnightmare",
+	"description": "Halloween. Enjoy the spooky night.",
+	"authors": [
+		"hanhy06"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/sweetnightmare/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"hanhy06.sweetnightmare.entrypoint.Sweetnightmare"
+		],
+		"client" : [
+			"hanhy06.sweetnightmare.entrypoint.SweetnightmareClient"
+		],
+		"fabric-datagen": [
+			"hanhy06.sweetnightmare.entrypoint.SweetnightmareDataGenerator"
+		]
+	},
+	"mixins": [
+		"sweetnightmare.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.6",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
