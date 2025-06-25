@@ -2,7 +2,7 @@ package hanhy06.sweetnightmare.item;
 
 import hanhy06.sweetnightmare.component.ModComponents;
 import hanhy06.sweetnightmare.entrypoint.Sweetnightmare;
-import hanhy06.sweetnightmare.item.function.CandyBasketItem;
+import hanhy06.sweetnightmare.item.function.CandyBucketItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKey;
@@ -13,8 +13,8 @@ import java.util.function.Function;
 
 public class ModItems {
     public static final Item CANDY_BUCKET = registerModItem(
-            "candy_bucket",
-                CandyBasketItem::new,
+            "candy_bucket.json",
+                CandyBucketItem::new,
                 new Item.Settings()
                         .maxCount(1)
                         .maxDamage(10)

@@ -1,0 +1,12 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "candy_bucket"
+  },
+  "overrides": [
+    { "predicate": { "demage": 1 }, "model": "item/magic_staff_full" },
+    { "predicate": { "custom_model_data": 2 }, "model": "item/magic_staff_half" },
+    { "predicate": { "custom_model_data": 3 }, "model": "item/magic_staff_low" },
+    { "predicate": { "custom_model_data": 4 }, "model": "item/magic_staff_empty" }
+  ]
+}
