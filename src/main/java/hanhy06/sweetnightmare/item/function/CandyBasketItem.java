@@ -1,4 +1,4 @@
-package hanhy06.sweetnightmare.item.custom;
+package hanhy06.sweetnightmare.item.function;
 
 import net.minecraft.item.Item;
 

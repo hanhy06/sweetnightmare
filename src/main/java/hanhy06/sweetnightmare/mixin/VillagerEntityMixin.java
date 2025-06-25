@@ -1,5 +1,6 @@
 package hanhy06.sweetnightmare.mixin;
 
+import hanhy06.sweetnightmare.component.ModComponents;
 import hanhy06.sweetnightmare.item.ModItems;
 import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -21,6 +22,8 @@ public class VillagerEntityMixin {
 
         if (!player.getWorld().isClient && itemStack.isOf(ModItems.CANDY_BUCKET) && !self.isBaby()){
             player.sendMessage(Text.of("Trick or Treat!"), false);
+
+            itemStack.set(ModComponents.CANDY_COUNT,itemStack.get(ModComponents.CANDY_COUNT)+1);
 
             cir.setReturnValue(ActionResult.SUCCESS);
         }
