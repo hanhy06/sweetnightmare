@@ -1,29 +1,38 @@
 {
-  "model": {
-    "type": "minecraft:select",
-    "property": "minecraft:component",
-    "component": "minecraft:custom_model_data",
-    "cases": [
-      {
-        "value": { "strings": ["full"] },
-        "model": "sweetnightmare:item/candy_bucket_full"
-      },
-      {
-        "value": { "strings": ["half"] },
-        "model": "sweetnightmare:item/candy_bucket_half"
-      },
-      {
-        "value": { "strings": ["low"] },
+  "type": "minecraft:select",
+  "property": "minecraft:custom_model_data",
+  "cases": [
+    {
+      "when": "low",
+      "model": {
+        "type": "minecraft:model",
         "model": "sweetnightmare:item/candy_bucket_low"
-      },
-      {
-        "value": { "strings": ["default"] },
+      }
+    },
+    {
+      "when": "half",
+      "model": {
+        "type": "minecraft:model",
+        "model": "sweetnightmare:item/candy_bucket_half"
+      }
+    },
+    {
+      "when": "full",
+      "model": {
+        "type": "minecraft:model",
+        "model": "sweetnightmare:item/candy_bucket_full"
+      }
+    },
+    {
+      "when": "default",
+      "model": {
+        "type": "minecraft:model",
         "model": "sweetnightmare:item/candy_bucket"
       }
-    ],
-    "fallback": {
-      "type": "minecraft:model",
-      "model": "sweetnightmare:item/candy_bucket"
     }
+  ],
+  "fallback": {
+    "type": "minecraft:model",
+    "model": "sweetnightmare:item/candy_bucket"
   }
 }

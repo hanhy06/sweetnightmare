@@ -1,6 +1,6 @@
 {
-  "parent": "item/handheld",
+  "parent": "item/generated",
   "textures": {
-    "layer0": "candy_bucket_low"
+    "layer0": "sweetnightmare:item/candy_bucket_low"
   }
 }
