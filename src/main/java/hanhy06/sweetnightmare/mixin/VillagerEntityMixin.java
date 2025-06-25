@@ -3,6 +3,8 @@ package hanhy06.sweetnightmare.mixin;
 import hanhy06.sweetnightmare.component.ModComponents;
 import hanhy06.sweetnightmare.item.ModItems;
 import net.minecraft.component.ComponentType;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.CustomModelDataComponent;
 import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -33,8 +35,25 @@ public class VillagerEntityMixin {
                     int temp  = Math.min((candyCount + (int)(Math.random() * 3) + 1), 10);
 
                     player.sendMessage(Text.of("Trick or Treat!"), false);
+
                     itemStack.set(ModComponents.CANDY_COUNT, temp);
-                    itemStack.setDamage(temp);
+                    CustomModelDataComponent component =  new CustomModelDataComponent(
+                            java.util.List.of(), java.util.List.of(), java.util.List.of("default"), java.util.List.of()
+                    );;
+                    if (1<=temp && temp<5){
+                        component = new CustomModelDataComponent(
+                                java.util.List.of(), java.util.List.of(), java.util.List.of("low"), java.util.List.of()
+                        );
+                    } else if (5<=temp && temp<9) {
+                        component = new CustomModelDataComponent(
+                                java.util.List.of(), java.util.List.of(), java.util.List.of("half"), java.util.List.of()
+                        );
+                    } else if (temp == 10) {
+                        component = new CustomModelDataComponent(
+                                java.util.List.of(), java.util.List.of(), java.util.List.of("full"), java.util.List.of()
+                        );
+                    }
+                    itemStack.set(DataComponentTypes.CUSTOM_MODEL_DATA, component);
                 } else {
                     player.sendMessage(Text.of("Hey! You're not supposed to take the whole bowl!"), false);
                 }
