@@ -17,6 +17,7 @@ public class ModItems {
                 CandyBasketItem::new,
                 new Item.Settings()
                         .maxCount(1)
+                        .maxDamage(10)
                         .component(ModComponents.CANDY_COUNT,0)
             );
 

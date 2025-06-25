@@ -20,11 +20,23 @@ public class VillagerEntityMixin {
         VillagerEntity self = (VillagerEntity)(Object)this;
         ItemStack itemStack = player.getStackInHand(hand);
 
-        if (!player.getWorld().isClient && itemStack.isOf(ModItems.CANDY_BUCKET) && !self.isBaby()){
-            player.sendMessage(Text.of("Trick or Treat!"), false);
+        if (!itemStack.isOf(ModItems.CANDY_BUCKET) || player.getWorld().isClient) {
+            cir.setReturnValue(ActionResult.PASS);
+            return;
+        }
 
-            itemStack.set(ModComponents.CANDY_COUNT,itemStack.get(ModComponents.CANDY_COUNT)+1);
+        int candyCount = itemStack.getOrDefault(ModComponents.CANDY_COUNT, 0);
 
+        if (!self.isBaby()) {
+            if (candyCount <10) {
+                player.sendMessage(Text.of("Trick or Treat!"), false);
+                itemStack.set(ModComponents.CANDY_COUNT, candyCount + (int)(Math.random() * 3) + 1);
+            } else {
+                player.sendMessage(Text.of("Hey! You're not supposed to take the whole bowl!"), false);
+            }
+            cir.setReturnValue(ActionResult.SUCCESS);
+        } else {
+            player.sendMessage(Text.of("야 나도 애거든! 뭘 바라는거야"), false);
             cir.setReturnValue(ActionResult.SUCCESS);
         }
     }
