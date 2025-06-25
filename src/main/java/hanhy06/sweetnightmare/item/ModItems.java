@@ -13,7 +13,7 @@ import java.util.function.Function;
 
 public class ModItems {
     public static final Item CANDY_BUCKET = registerModItem(
-            "candy_bucket.json",
+            "candy_bucket",
                 CandyBucketItem::new,
                 new Item.Settings()
                         .maxCount(1)

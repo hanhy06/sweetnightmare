@@ -11,7 +11,12 @@ public class CandyBucketItem extends Item {
 
     @Override
     public boolean isItemBarVisible(ItemStack stack) {
-        return true;
+        return stack.getOrDefault(ModComponents.CANDY_COUNT, 0) < 10;
+    }
+
+    @Override
+    public int getItemBarStep(ItemStack stack) {
+        return stack.getOrDefault(ModComponents.CANDY_COUNT,0);
     }
 
     @Override

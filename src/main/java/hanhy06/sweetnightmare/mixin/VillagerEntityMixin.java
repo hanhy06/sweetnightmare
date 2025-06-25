@@ -30,7 +30,7 @@ public class VillagerEntityMixin {
 
             if (!self.isBaby()) {
                 if (candyCount <10) {
-                    int temp  = Math.max((candyCount + (int)(Math.random() * 3) + 1), 10);
+                    int temp  = Math.min((candyCount + (int)(Math.random() * 3) + 1), 10);
 
                     player.sendMessage(Text.of("Trick or Treat!"), false);
                     itemStack.set(ModComponents.CANDY_COUNT, temp);
