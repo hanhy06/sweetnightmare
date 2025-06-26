@@ -1,16 +1,8 @@
 package hanhy06.sweetnightmare.item.function;
 
 import hanhy06.sweetnightmare.component.ModComponents;
-import net.minecraft.component.DataComponentTypes;
-import net.minecraft.component.type.CustomModelDataComponent;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.server.world.ServerWorld;
-import org.jetbrains.annotations.Nullable;
-
-import java.util.List;
 
 public class CandyBucketItem extends Item {
     public CandyBucketItem(Settings settings) {
