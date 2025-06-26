@@ -1,6 +1,7 @@
 package hanhy06.sweetnightmare.entrypoint;
 
 import hanhy06.sweetnightmare.component.ModComponents;
+import hanhy06.sweetnightmare.item.ModItemGroups;
 import hanhy06.sweetnightmare.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -16,6 +17,8 @@ public class Sweetnightmare implements ModInitializer {
 		LOGGER.info(MOD_ID+"mod load");
 
 		ModComponents.registerModComponents();
+
 		ModItems.registerModItems();
+		ModItemGroups.registerItemGroups();
 	}
 }

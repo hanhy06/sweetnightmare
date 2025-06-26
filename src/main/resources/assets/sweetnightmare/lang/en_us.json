@@ -1,4 +1,6 @@
 {
+  "item_groups.name" : "sweet nightmare",
+
   "item.sweetnightmare.candy_bucket" : "candy bucket",
 
   "item.sweetnightmare.candy_bucket_use_adult" : "Trick or Treat!",

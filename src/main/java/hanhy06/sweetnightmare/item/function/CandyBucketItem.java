@@ -31,29 +31,4 @@ public class CandyBucketItem extends Item {
     public int getItemBarColor(ItemStack stack) {
         return 0xC774AE;
     }
-
-    @Override
-    public void inventoryTick(ItemStack stack, ServerWorld world, Entity entity, @Nullable EquipmentSlot slot) {
-        int value = stack.getOrDefault(ModComponents.CANDY_COUNT,0);
-
-        CustomModelDataComponent component =  new CustomModelDataComponent(
-                List.of(), List.of(), List.of("default"), List.of()
-        );;
-        if (1<=value && value<5){
-            component = new CustomModelDataComponent(
-                    List.of(), List.of(), List.of("low"), List.of()
-            );
-        } else if (5<=value && value<9) {
-            component = new CustomModelDataComponent(
-                    List.of(), List.of(), List.of("half"), List.of()
-            );
-        } else if (value == 10) {
-            component = new CustomModelDataComponent(
-                    List.of(), List.of(), List.of("full"), List.of()
-            );
-        }
-        stack.set(DataComponentTypes.CUSTOM_MODEL_DATA, component);
-
-        super.inventoryTick(stack, world, entity, slot);
-    }
 }
