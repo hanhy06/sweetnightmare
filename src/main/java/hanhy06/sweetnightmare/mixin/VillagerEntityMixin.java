@@ -7,7 +7,6 @@ import net.minecraft.component.type.CustomModelDataComponent;
 import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
@@ -53,11 +52,11 @@ public class VillagerEntityMixin {
                         component = new CustomModelDataComponent(
                                 List.of(), List.of(), List.of("low"), List.of()
                         );
-                    } else if (5<=data && data<9) {
+                    } else if (5<=data && data<10) {
                         component = new CustomModelDataComponent(
                                 List.of(), List.of(), List.of("half"), List.of()
                         );
-                    } else if (data == 10) {
+                    } else if (data >= 10) {
                         component = new CustomModelDataComponent(
                                 List.of(), List.of(), List.of("full"), List.of()
                         );
@@ -68,7 +67,6 @@ public class VillagerEntityMixin {
                     }
 
                     itemStack.set(DataComponentTypes.CUSTOM_MODEL_DATA, component);
-
                     itemStack.set(ModComponents.CANDY_COUNT, data);
                 } else {
                     player.sendMessage(Text.translatable("item.sweetnightmare.candy_bucket_use_full"), false);
