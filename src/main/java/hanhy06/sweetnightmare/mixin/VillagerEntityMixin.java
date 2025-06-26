@@ -27,34 +27,14 @@ public class VillagerEntityMixin {
 
             if (!self.isBaby()) {
                 if (candyCount <10) {
-                    int temp  = Math.min((candyCount + (int)(Math.random() * 3) + 1), 10);
-
-                    player.sendMessage(Text.of("Trick or Treat!"), false);
-
-                    itemStack.set(ModComponents.CANDY_COUNT, temp);
-                    CustomModelDataComponent component =  new CustomModelDataComponent(
-                            java.util.List.of(), java.util.List.of(), java.util.List.of("default"), java.util.List.of()
-                    );;
-                    if (1<=temp && temp<5){
-                        component = new CustomModelDataComponent(
-                                java.util.List.of(), java.util.List.of(), java.util.List.of("low"), java.util.List.of()
-                        );
-                    } else if (5<=temp && temp<9) {
-                        component = new CustomModelDataComponent(
-                                java.util.List.of(), java.util.List.of(), java.util.List.of("half"), java.util.List.of()
-                        );
-                    } else if (temp == 10) {
-                        component = new CustomModelDataComponent(
-                                java.util.List.of(), java.util.List.of(), java.util.List.of("full"), java.util.List.of()
-                        );
-                    }
-                    itemStack.set(DataComponentTypes.CUSTOM_MODEL_DATA, component);
+                    player.sendMessage(Text.translatable("item.sweetnightmare.candy_bucket_use_adult"), false);
+                    itemStack.set(ModComponents.CANDY_COUNT, Math.min((candyCount + (int)(Math.random() * 3) + 1), 10));
                 } else {
-                    player.sendMessage(Text.of("Hey! You're not supposed to take the whole bowl!"), false);
+                    player.sendMessage(Text.translatable("item.sweetnightmare.candy_bucket_use_full"), false);
                 }
                 cir.setReturnValue(ActionResult.SUCCESS);
             } else {
-                player.sendMessage(Text.of("야 나도 애거든! 뭘 바라는거야"), false);
+                player.sendMessage(Text.translatable("item.sweetnightmare.candy_bucket_use_baby"), false);
                 cir.setReturnValue(ActionResult.SUCCESS);
             }
         }
