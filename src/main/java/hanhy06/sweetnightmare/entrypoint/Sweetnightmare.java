@@ -4,6 +4,7 @@ import hanhy06.sweetnightmare.component.ModComponents;
 import hanhy06.sweetnightmare.cutscene.CatmullRom;
 import hanhy06.sweetnightmare.item.ModItemGroups;
 import hanhy06.sweetnightmare.item.ModItems;
+import hanhy06.sweetnightmare.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.client.rendering.v1.WorldRenderEvents;
@@ -29,6 +30,8 @@ public class Sweetnightmare implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModItemGroups.registerItemGroups();
+
+//		ModWorldGeneration.generateModWorldGen();
 
 //		CatmullRom catmullRom = new CatmullRom(
 //				List.of(
