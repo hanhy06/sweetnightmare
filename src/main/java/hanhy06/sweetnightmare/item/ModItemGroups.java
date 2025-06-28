@@ -1,6 +1,6 @@
 package hanhy06.sweetnightmare.item;
 
-import hanhy06.sweetnightmare.entrypoint.Sweetnightmare;
+import hanhy06.sweetnightmare.Sweetnightmare;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;

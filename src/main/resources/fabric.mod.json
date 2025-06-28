@@ -16,13 +16,13 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"hanhy06.sweetnightmare.entrypoint.Sweetnightmare"
+          "hanhy06.sweetnightmare.Sweetnightmare"
 		],
 		"client" : [
-			"hanhy06.sweetnightmare.entrypoint.SweetnightmareClient"
+          "hanhy06.sweetnightmare.SweetnightmareClient"
 		],
 		"fabric-datagen": [
-			"hanhy06.sweetnightmare.entrypoint.SweetnightmareDataGenerator"
+          "hanhy06.sweetnightmare.SweetnightmareDataGenerator"
 		]
 	},
 	"mixins": [

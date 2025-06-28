@@ -1,11 +1,10 @@
 package hanhy06.sweetnightmare.item;
 
 import hanhy06.sweetnightmare.component.ModComponents;
-import hanhy06.sweetnightmare.entrypoint.Sweetnightmare;
+import hanhy06.sweetnightmare.Sweetnightmare;
 import hanhy06.sweetnightmare.item.custom.CandyBucketItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
-import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;

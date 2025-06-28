@@ -1,22 +1,12 @@
-package hanhy06.sweetnightmare.entrypoint;
+package hanhy06.sweetnightmare;
 
 import hanhy06.sweetnightmare.component.ModComponents;
-import hanhy06.sweetnightmare.cutscene.CatmullRom;
 import hanhy06.sweetnightmare.item.ModItemGroups;
 import hanhy06.sweetnightmare.item.ModItems;
-import hanhy06.sweetnightmare.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.fabric.api.client.rendering.v1.WorldRenderEvents;
-import net.minecraft.client.render.RenderTickCounter;
-import net.minecraft.client.world.ClientWorld;
-import net.minecraft.particle.ParticleEffect;
-import net.minecraft.particle.ParticleTypes;
-import net.minecraft.util.math.Vec3d;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.List;
 
 public class Sweetnightmare implements ModInitializer {
 	public static final String MOD_ID = "sweetnightmare";
@@ -30,8 +20,6 @@ public class Sweetnightmare implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModItemGroups.registerItemGroups();
-
-//		ModWorldGeneration.generateModWorldGen();
 
 //		CatmullRom catmullRom = new CatmullRom(
 //				List.of(

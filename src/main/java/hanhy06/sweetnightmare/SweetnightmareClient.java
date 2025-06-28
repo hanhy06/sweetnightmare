@@ -1,4 +1,4 @@
-package hanhy06.sweetnightmare.entrypoint;
+package hanhy06.sweetnightmare;
 
 import net.fabricmc.api.ClientModInitializer;
 

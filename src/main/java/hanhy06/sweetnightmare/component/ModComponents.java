@@ -1,7 +1,7 @@
 package hanhy06.sweetnightmare.component;
 
 import com.mojang.serialization.Codec;
-import hanhy06.sweetnightmare.entrypoint.Sweetnightmare;
+import hanhy06.sweetnightmare.Sweetnightmare;
 import net.minecraft.component.ComponentType;
 import net.minecraft.network.codec.PacketCodecs;
 import net.minecraft.registry.Registries;
