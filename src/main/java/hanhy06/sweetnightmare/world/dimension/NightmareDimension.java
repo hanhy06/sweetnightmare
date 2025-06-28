@@ -10,6 +10,7 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.World;
 import net.minecraft.world.dimension.DimensionOptions;
 import net.minecraft.world.dimension.DimensionType;
+import net.minecraft.world.dimension.DimensionTypes;
 
 import java.util.Optional;
 import java.util.OptionalLong;
@@ -42,11 +43,15 @@ public class NightmareDimension {
                         256,
                         256,
                         BlockTags.INFINIBURN_OVERWORLD,
-                        NIGHTMARE_ID,
+                        DimensionTypes.OVERWORLD_ID,
                         0.0F,
                         Optional.empty(),
                         new DimensionType.MonsterSettings(false, true, UniformIntProvider.create(0, 7), 0)
                 )
         );
+    }
+
+    public static void nightmareDimensionRegister(){
+        Sweetnightmare.LOGGER.info("register nightmare dimension");
     }
 }

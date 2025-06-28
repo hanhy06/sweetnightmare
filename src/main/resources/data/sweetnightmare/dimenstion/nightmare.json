@@ -1,0 +1,15 @@
+{
+  "type": "sweetnightmare:nightmare_type",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "minecraft:overworld",
+    "biome_source": {
+      "type": "minecraft:checkerboard",
+      "scale": 5,
+      "biomes": [
+        "minecraft:plains",
+        "minecraft:cherry_grove"
+      ]
+    }
+  }
+}

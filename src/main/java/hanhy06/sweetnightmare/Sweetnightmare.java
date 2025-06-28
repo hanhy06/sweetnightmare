@@ -3,6 +3,7 @@ package hanhy06.sweetnightmare;
 import hanhy06.sweetnightmare.component.ModComponents;
 import hanhy06.sweetnightmare.item.ModItemGroups;
 import hanhy06.sweetnightmare.item.ModItems;
+import hanhy06.sweetnightmare.world.dimension.NightmareDimension;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -20,6 +21,8 @@ public class Sweetnightmare implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModItemGroups.registerItemGroups();
+
+		NightmareDimension.nightmareDimensionRegister();
 
 //		CatmullRom catmullRom = new CatmullRom(
 //				List.of(
