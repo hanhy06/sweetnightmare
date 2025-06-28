@@ -5,5 +5,6 @@
 
   "item.sweetnightmare.candy_bucket_use_adult" : "Trick or Treat!",
   "item.sweetnightmare.candy_bucket_use_full" : "Hey, the cup is already full! I can't give you any more!",
-  "item.sweetnightmare.candy_bucket_use_baby" : "Hey, I'm just a kid too! What do you expect from me?"
+  "item.sweetnightmare.candy_bucket_use_baby" : "Hey, I'm just a kid too! What do you expect from me?",
+  "item.sweetnightmare.candy_bucket_use_fail" : "§kdo you want eat candy?"
 }

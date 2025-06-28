@@ -5,5 +5,6 @@
 
   "item.sweetnightmare.candy_bucket_use_adult" : "Trick or Treat!",
   "item.sweetnightmare.candy_bucket_use_baby" : "야 나도 애거든! 뭘 바라는 거야",
-  "item.sweetnightmare.candy_bucket_use_full" : "어허 이미 꽉 찻잔이니! 더 이상은 못 줘!"
+  "item.sweetnightmare.candy_bucket_use_full" : "어허 이미 꽉 찻잔이니! 더 이상은 못 줘!",
+  "item.sweetnightmare.candy_bucket_use_fail" : "§k사탕을 먹고 싶니?"
 }
