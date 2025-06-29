@@ -22,8 +22,8 @@ import static hanhy06.sweetnightmare.world.dimension.NightmareDimension.NIGHTMAR
 public class ServerPlayerEntityMixin {
     @Shadow @Final private MinecraftServer server;
 
-    @Inject(at = @At("RETURN"),method = "wakeUp")
-    public void wakeUp(boolean skipSleepTimer, boolean updateSleepingPlayers, CallbackInfo ci){
+    @Inject(at = @At("RETURN"), method = "wakeUp")
+    public void wakeUp(boolean skipSleepTimer, boolean updateSleepingPlayers, CallbackInfo ci) {
         ServerPlayerEntity serverPlayer = (ServerPlayerEntity) (Object) this;
 
         for (ItemStack itemStack : serverPlayer.getInventory().getMainStacks()) {
@@ -31,23 +31,25 @@ public class ServerPlayerEntityMixin {
             int candyCount = itemStack.getOrDefault(ModComponents.CANDY_COUNT, 0);
 
             if (isCandyBucket && candyCount >= 10) {
-                ServerWorld nightmareWorld = server.getWorld(NIGHTMARE_LEVEL_KEY);
+                this.server.execute(() -> {
+                    ServerWorld nightmareWorld = server.getWorld(NIGHTMARE_LEVEL_KEY);
 
-                if (nightmareWorld == null) {
-                    Sweetnightmare.LOGGER.error("Nightmare dimension not found! Teleportation cancelled.");
-                    return;
-                }
+                    if (nightmareWorld == null) {
+                        Sweetnightmare.LOGGER.error("Nightmare dimension not found! Teleportation cancelled.");
+                        return;
+                    }
 
-                serverPlayer.teleport(
-                        nightmareWorld,
-                        serverPlayer.getX(),
-                        serverPlayer.getY(),
-                        serverPlayer.getZ(),
-                        Set.of(),
-                        serverPlayer.getYaw(),
-                        serverPlayer.getPitch(),
-                        true
-                );
+                    serverPlayer.teleport(
+                            nightmareWorld,
+                            serverPlayer.getX(),
+                            serverPlayer.getY(),
+                            serverPlayer.getZ(),
+                            Set.of(),
+                            serverPlayer.getYaw(),
+                            serverPlayer.getPitch(),
+                            true
+                    );
+                });
 
                 return;
             }
