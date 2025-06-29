@@ -17,6 +17,6 @@ public class SweetnightmareDataGenerator implements DataGeneratorEntrypoint {
 
 	@Override
 	public void buildRegistry(RegistryBuilder registryBuilder) {
-		registryBuilder.addRegistry(RegistryKeys.DIMENSION_TYPE, NightmareDimension::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.DIMENSION_TYPE, NightmareDimension::bootstrapType);
 	}
 }

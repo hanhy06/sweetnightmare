@@ -3,6 +3,7 @@
   "package": "hanhy06.sweetnightmare.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "ServerPlayerEntityMixin",
     "VillagerEntityMixin"
   ],
   "injectors": {
